@@ -147,16 +147,16 @@ function generatePassword() {
   // Uppercase and symbols
   else if (includeLowercase === false && includeUppercase === true && includeNumbers === false && includeSpecial === true) {
     for (i = 0; i < passwordLength; i++) {
-      if (Math.random() > .58) {
+      if (Math.random() > .55) {
         password += String.fromCharCode(Math.floor(Math.random() * (91 - 65) + 65)); // Uppercase
       }
-      else if (Math.random() > .53) {
+      else if (Math.random() > .29) {
         password += String.fromCharCode(Math.floor(Math.random() * (48 - 33) + 33)); 
       }
-      else if (Math.random() > .31){
+      else if (Math.random() > .17){
         password += String.fromCharCode(Math.floor(Math.random() * (65 - 58) + 58)); 
       }
-      else if (Math.random() > .125){
+      else if (Math.random() > .068){
         password += String.fromCharCode(Math.floor(Math.random() * (97 - 91) + 91)); 
       }
       else {
@@ -167,16 +167,16 @@ function generatePassword() {
   // Lowercase and symbols
   else if (includeLowercase === true && includeUppercase === false && includeNumbers === false && includeSpecial === true) {
     for (i = 0; i < passwordLength; i++) {
-      if (Math.random() > .58) {
+      if (Math.random() > .55) {
         password += String.fromCharCode(Math.floor(Math.random() * (123 - 97) + 97)); // Lowercase
       }
-      else if (Math.random() > .53) {
+      else if (Math.random() > .29) {
         password += String.fromCharCode(Math.floor(Math.random() * (48 - 33) + 33)); 
       }
-      else if (Math.random() > .31){
+      else if (Math.random() > .17){
         password += String.fromCharCode(Math.floor(Math.random() * (65 - 58) + 58)); 
       }
-      else if (Math.random() > .125){
+      else if (Math.random() > .068){
         password += String.fromCharCode(Math.floor(Math.random() * (97 - 91) + 91)); 
       }
       else {
@@ -207,7 +207,7 @@ function generatePassword() {
     }
   }
   else if (includeLowercase === false && includeUppercase === false && includeNumbers === false && includeSpecial === false) {
-    window.alert("YOu need to slect at least on of the options. Try again!")
+    window.alert("You need to slect at least on of the options. Try again!")
   }
 
   return password;
