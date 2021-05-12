@@ -19,8 +19,9 @@ function generatePassword() {
   var includeSpecial = window.confirm("Would you like to include special characters?");
   
   // All true
-  if (includeLowercase === true && includeUppercase === true && includeNumbers === true && includeSpecial === true ){
+  if (includeLowercase === true && includeUppercase === true && includeNumbers === true && includeSpecial === true ) {
     for (i = 0; i < passwordLength; i++) {
+      // The next line uses random combined with code to convert random numbers to their ASCII equivalent
       password += String.fromCharCode(Math.floor(Math.random() * (127 - 33) + 33));
     }
   }
@@ -33,6 +34,7 @@ function generatePassword() {
   // No uppercase
   else if (includeLowercase === true && includeUppercase === false && includeNumbers === true && includeSpecial === true) {
     for (i = 0; i < passwordLength; i++) {
+      // These if else statements make it so there is equal opportunity for each catagory: Lowercase, Uppercase, Numbers, Special
       if (Math.random() > .5) {
         password += String.fromCharCode(Math.floor(Math.random() * (127 - 91) + 91));
       }
@@ -216,5 +218,3 @@ function generatePassword() {
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 
-
-// String.fromCharCode(#)
